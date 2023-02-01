@@ -3,6 +3,9 @@
 	padding: 0;
 	margin: 0;
 }
+html {
+	font-size: 62.5%;
+}
 :root {
 	--white: #fff;
 	--pale-blue: hsl(225, 100%, 94%);
@@ -17,19 +20,84 @@ body {
 	justify-content: center;
 	height: 100vh;
 	width: 100vw;
+	font-family: 'Red Hat Display', sans-serif;
+	font-size: 1.6rem;
+	color: var(--desaturated-blue);
+	font-weight: 500;
 	background-color: var(--pale-blue);
 }
 .card {
 	position: relative;
 	width: 330px;
-	height: 570px;
+	/* height: 570px; */
+	height: auto;
 	background-color: var(--white);
-    padding-top: 30%;
-    border-radius: 28px;
-    background-image: url(./images/illustration-hero.svg);
-    background-position: top;
-    background-size: contain;
-    background-repeat: no-repeat;
+	padding: 195px 24px 20px;
+	border-radius: 28px;
+	background-image: url(./images/illustration-hero.svg);
+	background-position: top;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+}
+/* .card::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 570px;
+	background-color: red;
+} */
+.card-text {
+	text-align: center;
+	line-height: 25px;
+	margin: 0 9px;
+}
+.card-text h1 {
+	font-size: 2.2rem;
+	margin-bottom: 18px;
+	font-weight: 900;
+	color: rgba(0, 0, 0, 0.85);
+}
+.card-choosen-plan {
+	display: flex;
+	margin: 25px 0 16px;
+	padding: 15px;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--very-pale-blue);
+	border-radius: 14px;
+	font-size: 13px;
+}
+.card-choosen-plan a {
+	color: var(--bright-blue);
+	font-weight: bold;
+}
+.plan-text-content {
+	flex-grow: 1;
+	padding: 0 20px;
+}
+.plan-text-content h2 {
+	color: black;
+	font-size: 13px;
+}
+.btn {
+	width: 100%;
+	margin-top: 8px;
+	padding: 1.2em 2.4em;
+	border: none;
+	font-weight: bold;
+	border-radius: 15px;
+	bottom: none;
+}
+.apply-btn{
+	background-color: var(--bright-blue);
+	color: var(--white);
+	box-shadow: 0px 14px 12px 0px hsl(245deg 75% 52% / 15%);
+}
+.cancel-btn{
+	background: none;
+	color: var(--desaturated-blue);
 }
 
 .attribution {
