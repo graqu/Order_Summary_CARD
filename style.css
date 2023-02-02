@@ -15,19 +15,23 @@ html {
 	--dark-blue: hsl(223, 47%, 23%);
 }
 body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
-	width: 100vw;
 	font-family: 'Red Hat Display', sans-serif;
 	font-size: 1.6rem;
 	color: var(--desaturated-blue);
 	font-weight: 500;
 	background-color: var(--pale-blue);
 }
+.main{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	min-height: 700px;
+	width: 100vw;
+}
 .card {
 	position: relative;
+	margin: 0 5px;
 	width: 330px;
 	/* height: 570px; */
 	height: auto;
@@ -39,15 +43,7 @@ body {
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 }
-/* .card::after{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100px;
-	height: 570px;
-	background-color: red;
-} */
+
 .card-text {
 	text-align: center;
 	line-height: 25px;
@@ -70,8 +66,13 @@ body {
 	font-size: 13px;
 }
 .card-choosen-plan a {
-	color: var(--bright-blue);
+	color: rgb(29, 59, 149);
 	font-weight: bold;
+	cursor: pointer;
+}
+.card-choosen-plan a:hover {
+	text-decoration: none;
+	color: var(--bright-blue);
 }
 .plan-text-content {
 	flex-grow: 1;
@@ -89,25 +90,76 @@ body {
 	font-weight: bold;
 	border-radius: 15px;
 	bottom: none;
+	cursor: pointer;
+	transition: color .3s, background-color .3s;
 }
 .apply-btn{
 	background-color: var(--bright-blue);
 	color: var(--white);
 	box-shadow: 0px 14px 12px 0px hsl(245deg 75% 52% / 15%);
 }
+.apply-btn:hover{
+	background-color: hsla(245, 75%, 52%, 0.707);
+}
 .cancel-btn{
 	background: none;
 	color: var(--desaturated-blue);
 }
+.cancel-btn:hover{
+	color: black;
+}
 
 .attribution {
 	position: absolute;
-	bottom: 0;
-	width: 100%;
+	width: 100vw;
 	font-size: 11px;
 	text-align: center;
 }
 
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+/* .card::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 700px;
+	background-color: red;
+} */
+
+@media (min-width: 768px) {
+	.card {
+		width: 450px;
+		/* height: 700px; */
+		height: auto;
+		padding: 274px 48px 38px;
+	}
+	.card-text h1 {
+		font-size: 2.8rem;
+		margin-bottom: 20px;
+	}
+	.card-text {
+		line-height: 26px;
+	}
+	.card-choosen-plan {
+		margin: 18px 0 22px;
+		padding: 15px;
+		font-size: 18px;
+	}
+	.plan-text-content {
+		padding: 5px 20px 15px;
+	}
+	.card-choosen-plan a {
+		font-size: 14px;
+	}
+	.card-choosen-plan h2 {
+		font-size: 18px;
+		margin-bottom: 4px;
+	}
+	.btn {
+		padding: 1.3em 2.4em;
+		font-size: 1.4rem;
+	}
 }
